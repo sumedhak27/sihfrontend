@@ -1,0 +1,354 @@
+<div></div><br>
+<div style="text-align: center;"><h2>STET Registration Form</h2></div>
+    <br>
+    <div class="line"></div>
+<div class="margin">
+    <div *ngIf="!userIdRecieved">
+        
+        <div class="card" style="text-align: center;">
+            <div class="card-body">
+                <form [formGroup]="password">
+                    <h5>Application Id  </h5>
+                        <h4>{{userId}}</h4>
+                        <div class="line"></div><br>
+                    <input type="password" class="form-control" placeholder="Password" aria-describedby="addon-wrapping" formControlName="pass1">
+                   <br> <input type="password" class="form-control" placeholder="Confirm Password" aria-describedby="addon-wrapping" formControlName="pass2"><br>
+                </form>
+                    <div style="text-align: center;"><button class="btn getColour" (click)="setUserIdPass()">Proceed</button></div>
+            </div>
+          </div>
+    </div>
+
+
+    
+    <div *ngIf="userIdRecieved" style="margin: 5%;">
+        <mat-tab-group>
+            <mat-tab label="First">
+                <form [formGroup]="registrationForm">
+                    <br>
+
+
+                    <b>Name:</b>
+                    <br><br>
+                    
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="selfFirstName">
+                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="selfLastName">
+                    </div>
+        
+        
+                    <br>
+                    <b>Father's Name:</b>
+                    <br><br>
+                    
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="fatherFirstName">
+                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="fatherLastName">
+                    </div>
+        
+                    <br>
+        
+                    <b>Mother's Name:</b>
+                    <br><br>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="motherFirstName">
+                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="motherLastName">
+                    </div>
+        
+                    <br>
+                    <b>Date Of Birth:</b>
+                    <br><br>
+                        <!-- <input type="date" formControlName="DOB"> -->
+                        <div class="input-group flex-nowrap">
+                            <input type="date" formControlName="DOB" class="form-control" placeholder="DD/MM/YYYY" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="DOB">
+                            <!-- <input type="text" class="form-control" placeholder="Username" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="motherLastName"> -->
+                        </div>
+                    
+                        
+        
+                    <br>
+        
+                    <b>Address:</b>
+                    <br><br>
+                    
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Street" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="streetAddress">
+                        <!-- <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="fatherLastName"> -->
+                    </div>
+                    <br>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="City" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="city">
+                        <input type="text" class="form-control" placeholder="District" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="district">
+                    </div>
+                    <br>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="State" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="state">
+                        <input type="text" class="form-control" placeholder="Postal Code" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="postalCode">
+                    </div> 
+        
+                    <br>
+                    <b>Email Id:</b>
+                    <br><br>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Email Id" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="Email">
+                    </div>
+                    <br>
+                    <b>Phone Number:</b>
+                    <br><br>
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Mobile Number" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="mobNo">
+                    </div>
+                    <br>
+                </form>
+            </mat-tab>
+
+            <!-- _____________________________________________________________________________ -->
+            <!-- _____________________________________________________________________________ -->
+            <!-- _____________________________________________________________________________ -->
+            <!-- Second Tab -->
+
+            <mat-tab label="Second">
+                <form [formGroup]="registrationForm">
+                    <br>
+                    <b>Language of Paper:</b>
+                        <br><br>
+                        <select class="custom-select" formControlName="paperLanguage">
+                            <option selected>Select Option</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="English">English</option>
+                        </select>
+                        <br><br>
+                        <b>Category of Teacher for STET:</b>
+                        <br><br>
+                        <div class="custom-control custom-radio" >
+                            <input type="radio" class="custom-control-input" id="1" name="defaultExampleRadios">
+                            <label class="custom-control-label" for="1">Primary Teachers for Classes I to V</label>
+                        </div><br>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="2" name="defaultExampleRadios">
+                            <label class="custom-control-label" for="2">GT Arts for Classes VI to VIII</label>
+                        </div><br>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="3" name="defaultExampleRadios">
+                            <label class="custom-control-label" for="3">GT Science/Maths for Classes VI to VIII</label>
+                        </div>
+                        <br><br>
+                        <b>Educational Qualification</b>
+                        <br><br>
+                        <b>Xth Details</b>
+                        <br><br>
+                            <select class="browser-default custom-select">
+                                <option selected>Select Stream</option>
+                                <option value="1">Science</option>
+                                <option value="2">Commerce</option>
+                                <option value="3">Arts</option>
+                                <option value="4">Others</option>
+                                <option value="5">B.A</option>
+                                <option value="6">B.Sc</option>
+                                <option value="7">B.Com</option>
+                                <option value="8">Not Applicable</option>
+                            </select>
+                            <br><br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Name of Board/University/Institute" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Year Of Passing " aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Maximum Marks" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Marks Obtained" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Percentage" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                        <br>
+                        <b>XIIth Details</b>
+                        <br><br>
+                            <select class="browser-default custom-select">
+                                <option selected>Select Stream</option>
+                                <option value="1">Science</option>
+                                <option value="2">Commerce</option>
+                                <option value="3">Arts</option>
+                                <option value="4">Others</option>
+                                <option value="5">B.A</option>
+                                <option value="6">B.Sc</option>
+                                <option value="7">B.Com</option>
+                                <option value="8">Not Applicable</option>
+                            </select>
+                            <br><br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Name of Board/University/Institute" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Year Of Passing " aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Maximum Marks" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Marks Obtained" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Percentage" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                            </div>
+                        <br>
+                        <b>Graduation Details</b>
+                        <br><br>
+                        <select class="browser-default custom-select">
+                            <option selected>Select Stream</option>
+                            <option value="1">Science</option>
+                            <option value="2">Commerce</option>
+                            <option value="3">Arts</option>
+                            <option value="4">Others</option>
+                            <option value="5">B.A</option>
+                            <option value="6">B.Sc</option>
+                            <option value="7">B.Com</option>
+                            <option value="8">Not Applicable</option>
+                        </select>
+                        <br><br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter Name of Board/University/Institute" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Year Of Passing " aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Maximum Marks" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Marks Obtained" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Percentage" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <b>D.EI.Ed Details</b>
+                        <br><br>
+                        <select class="browser-default custom-select">
+                            <option selected>Select Stream</option>
+                            <option value="1">Science</option>
+                            <option value="2">Commerce</option>
+                            <option value="3">Arts</option>
+                            <option value="4">Others</option>
+                            <option value="5">B.A</option>
+                            <option value="6">B.Sc</option>
+                            <option value="7">B.Com</option>
+                            <option value="8">Not Applicable</option>
+                        </select>
+                        <br><br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter Name of Board/University/Institute" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Year Of Passing " aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Maximum Marks" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Marks Obtained" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Percentage" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <b>B.Ed Deatils</b> 
+                        <br><br>
+                        <select class="browser-default custom-select">
+                            <option selected>Select Stream</option>
+                            <option value="1">Science</option>
+                            <option value="2">Commerce</option>
+                            <option value="3">Arts</option>
+                            <option value="4">Others</option>
+                            <option value="5">B.A</option>
+                            <option value="6">B.Sc</option>
+                            <option value="7">B.Com</option>
+                            <option value="8">Not Applicable</option>
+                        </select>
+                        <br><br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter Name of Board/University/Institute" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Year Of Passing " aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Maximum Marks" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Marks Obtained" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Percentage" aria-label="First Name" aria-describedby="addon-wrapping"><br>
+                        </div>
+                        
+                        <br><br>
+                        <b>Are you Physically Impaired:</b>
+                        <br><br>
+                        <div class="custom-control custom-radio" >
+                            <input type="radio" class="custom-control-input" id="5" name="defaultExampleRadios">
+                            <label class="custom-control-label" for="5">Yes</label>
+                        </div><br>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input" id="4" name="defaultExampleRadios">
+                            <label class="custom-control-label" for="4">No</label>
+                        </div><br>
+                        
+                        <b>Upload Photo</b><br><br>
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                              <input #file type="file" accept='image/*' (change)="preview(file.files)" class="custom-file-input" id="inputGroupFile02">
+                              
+                              <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            </div>
+                          </div>
+                        <img [src]="imgURL" height="50" *ngIf="imgURL">
+
+                        <!-- <b>Upload Scanned Signature</b><br><br>
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                              <input #file type="file" accept='image/*' (change)="preview(file.files)" class="custom-file-input" id="inputGroupFile02">
+                              
+                              <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            </div>
+                          </div>
+                        <img [src]="imgURL" height="50" *ngIf="imgURL"> -->
+
+                          
+                          
+                <br><br>
+                <div style="text-align: center;">
+                <button class="btn btn-success" [disabled]="!registrationForm.valid" (click)="onSubmit()">Submit</button>
+            </div>
+            </form>
+            </mat-tab>
+
+          </mat-tab-group>
+          <br>
+        
+        
+    </div>
+</div>

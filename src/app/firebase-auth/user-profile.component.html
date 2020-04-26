@@ -1,0 +1,68 @@
+
+<div class=" card">
+    <div class="card1">
+
+        <h2> Login using Google </h2>
+    
+        <div *ngIf="auth.user$ | async; then authenticated else guest">
+            template will replace this div
+        </div>
+        
+        User NOT logged in
+        <ng-template #guest>
+        <h3>Howdy, GUEST</h3>
+        <p>Login to get started...</p>
+        
+        <button (click)="auth.googleSignin()">
+            <i class="fa fa-google"></i> Connect Google
+        </button>
+        
+        </ng-template>
+        
+        
+        User logged in
+        <ng-template #authenticated>
+        <div *ngIf="auth.user$ | async as user">
+            <h3>Howdy, {{ user.displayName }}</h3>
+            <img  [src]="user.photoURL">
+            <p>UID: {{ user.uid }}</p>
+            <button (click)="auth.signOut()">Logout</button>
+        </div>
+        </ng-template>
+    </div>
+    
+    <div class="card2">
+        
+        <div [hidden]="user">
+            <h1>Sign In with Your Phone Number</h1>
+          
+            <label for="phone">Phone Number</label><br>
+            <input type="text" [(ngModel)]="phoneNumber.country"  class="input" placeholder="91"    maxlength="2">
+            <input type="text" [(ngModel)]="phoneNumber.line"     class="input" placeholder="8080808080" maxlength="10">
+          
+            <div id="recaptcha-container"></div>
+          
+            <button (click)="sendLoginCode()">SMS Text Login Code</button>
+          
+            <div *ngIf="windowRef.confirmationResult">
+              <hr>
+              <label for="code">Enter your Verification Code Here</label><br>
+              <input type="text" name="code" [(ngModel)]="verificationCode">
+          
+              <button (click)="verifyLoginCode()">Verify</button>
+            </div>
+          
+          </div>
+          
+          <div *ngIf="user">
+            You have successfully logged in with your phone number!
+          
+            UserId: {{ user?.uid }}
+          </div>
+    </div>
+    
+</div>
+
+
+<!-- <div class="card"> -->
+<!-- </div> -->

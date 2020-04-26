@@ -1,0 +1,65 @@
+{
+    "name": {"FirstName": "firstName", "LastName": "lastName"},
+    "fatherName": {"FirstName": "firstName", "LastName": "lastName"},
+    "motherName": {"FirstName": "firstName", "LastName": "lastName"},
+    "DOB": "DD/MM/YYYY",
+    "address": {
+        "street": "",
+        "city": "",
+        "district": "",
+        "state": "",
+        "postalCode": "integers"
+    },
+    "Email": "",
+    "mobNo": "int",
+    "paperLanguage": "",
+    "teacherCategory": "",
+    "educationaQualifcation": {
+        "class X": {
+            "streamCode": "int",
+            "nameOfBoard": "",
+            "yearOfPassing": "int",
+            "maxMarks": "int",
+            "obtainedMarks": "int",
+            "percentage": "int"
+        },
+        "class XII": {
+            "streamCode": "int",
+            "nameOfBoard": "",
+            "yearOfPassing": "int",
+            "maxMarks": "int",
+            "obtainedMarks": "int",
+            "percentage": "int"
+        },
+        "graduation": {
+            "streamCode": "int",
+            "nameOfBoard": "",
+            "yearOfPassing": "int",
+            "maxMarks": "int",
+            "obtainedMarks": "int",
+            "percentage": "int"
+        },
+        "D.EI.Ed": {
+            "streamCode": "int",
+            "nameOfBoard": "",
+            "yearOfPassing": "int",
+            "maxMarks": "int",
+            "obtainedMarks": "int",
+            "percentage": "int"
+        },
+        "B.Ed": {
+            "streamCode": "int",
+            "nameOfBoard": "",
+            "yearOfPassing": "int",
+            "maxMarks": "int",
+            "obtainedMarks": "int",
+            "percentage": "int"
+        }
+    },
+    "photo": "url",
+    "communityCode": "int",
+    "orthopedicallyImpaired": "boolean",
+    "degreeOfDisability": "int",
+    "appearedForSTET": "boolean",
+    "scannedSignature": "url"
+}
