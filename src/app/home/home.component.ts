@@ -14,11 +14,11 @@ export class HomeComponent implements OnInit {
   }
 
   logReg() {
-    this._router.navigateByUrl("/register")
+    this._router.navigateByUrl("/register/0")
   }
 
   login() {
-    this._router.navigateByUrl("/firebase-auth")
+    this._router.navigateByUrl("/login")
   }
 
 }

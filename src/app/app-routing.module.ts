@@ -9,7 +9,7 @@ import { FirebaseAuthComponent } from '../app/firebase-auth/user-profile.compone
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
-  { path:'register', component: registrationFormComponent },
+  { path:'register/:userid', component: registrationFormComponent },
   { path:'login', component: LoginComponent },
   { path:'profile', component: ProfileComponent },
   { path:'firebase-auth', component:  FirebaseAuthComponent},

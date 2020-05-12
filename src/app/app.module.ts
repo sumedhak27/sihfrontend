@@ -19,6 +19,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+// import { AngularFireUploadTask } from '@angular/fire/storage'
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FirebaseAuthComponent } from './firebase-auth/user-profile.component';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { FormsModule } from '@angular/forms';
@@ -58,10 +60,12 @@ const config = {
     MatButtonModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AngularFireModule.initializeApp(config),
+    AngularFireStorageModule,
+    // AngularFireUploadTask,
     AngularFirestoreModule,
     AngularFireAuthModule,
     RecaptchaModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [WindowService],
   bootstrap: [AppComponent]
