@@ -14,7 +14,14 @@ export class HomeComponent implements OnInit {
   }
 
   logReg() {
-    this._router.navigateByUrl("/register/0")
+    this._router.navigateByUrl("/register")
+  }
+  admitCard() {
+    this._router.navigateByUrl("/admitCard")
+  }
+
+  result() {
+    this._router.navigateByUrl("/result")
   }
 
   login() {

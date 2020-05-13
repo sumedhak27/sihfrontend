@@ -1,15 +1,14 @@
 <div></div><br>
-<div style="text-align: center;"><h2>STET Registration Form</h2></div>
+<div style="text-align: center;"><h5>STET Registration Form</h5></div>
     <br>
     <div class="line"></div>
 <div class="margin">
-    <div *ngIf="userIdRecieved">
+    <div *ngIf="!userIdRecieved">
         
         <div class="card" style="text-align: center;">
             <div class="card-body">
                 <form [formGroup]="password">
-                    <h5>User Id  </h5>
-                         <div>Note the user id for further login</div>
+                    <h5>Application Id  </h5>
                         <h4>{{userId}}</h4>
                         <div class="line"></div><br>
                     <input type="password" class="form-control" placeholder="Password" aria-describedby="addon-wrapping" formControlName="pass1">
@@ -22,7 +21,7 @@
 
 
     
-    <div *ngIf="!userIdRecieved" style="margin: 5%;">
+    <div *ngIf="userIdRecieved" style="margin: 5%;">
         <mat-tab-group>
             <mat-tab label="First">
                 <form [formGroup]="registrationForm">
@@ -337,22 +336,19 @@
                             </div>
                           </div>
                         <img [src]="imgURL" height="50" *ngIf="imgURL"> -->
-                        <b>Upload Aadhar Card</b>
-                        <div class="input_group mb3">
-                            <input type="file" name="" id="aadhar_card" (change) = "upload()">
-                        </div>
 
                           
                           
                 <br><br>
                 <div style="text-align: center;">
-                <button *ngIf="!loggedin" class="btn btn-success" [disabled]="!registrationForm.valid" (click)="onSubmit()">Submit</button>
-                <button *ngIf="loggedin" class="btn btn-success" [disabled]="!registrationForm.valid" (click)="onUpdate()">Update</button>
+                <button class="btn btn-success" [disabled]="!registrationForm.valid" (click)="onSubmit()">Submit</button>
             </div>
             </form>
             </mat-tab>
 
           </mat-tab-group>
-          <br>    
+          <br>
+        
+          
     </div>
 </div>

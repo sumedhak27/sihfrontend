@@ -1,0 +1,81 @@
+<div class="box">
+    <div style="margin-top: 3%; margin-bottom: 3%; margin-left: 2%; margin-right: 2%;" class="row">
+        <div class="col-4">
+        <img src="../../assets/STET.jpg" height="60"> 
+        </div>
+        <div class="col-8" style="text-align: center; margin:auto;">
+            <h6>Sikkim Teacher Elegibility Test</h6>
+            <h6>Admit Card</h6>
+            <!-- <br> -->
+        </div>
+    </div>
+    
+    <div class="line"></div>
+
+    
+    <div class="row avatar_margin">
+        <div class="col-8 avatar_text">
+            Name:  <b>{{formData.name.firstName}} {{formData.name.lastName}} </b>
+            <br>
+            Application ID:  <b>{{formData._id}}</b>
+            
+        </div>
+        <div class="col-4">
+        <img src={{formData.photo_url}} height="90%" width="90%"> 
+        </div>
+        <!-- <div class="col-4 avatar_image">
+            <img src="../../assets/avatar.png" height="120"> 
+        </div> -->
+    </div>
+
+    <div class="details">
+        <div class="personal_details">
+            <b>Personal Details</b>
+            <br>
+            Date of Birth:  {{formData.DOB}}
+            <br>
+            Mother's Name:  {{formData.motherName.firstName}} {{formData.motherName.lastName}}
+            <!-- <br>
+            PwD:  Yes/No -->
+        </div>
+        <div class="personal_details">
+            <b>Examination Details</b>
+            <br>
+            Date of Exam:  DD/MM/YYYY
+            <br>
+            Timing of Test:  12:00 pm to 2:00 pm
+            <br>
+            Test Center Number:  1234
+            <br>
+            Venue:  khewiqhdiwajf, hdiohwqfio, lndlkfnl, 9868.
+            <br>
+            Language of Answer:  {{formData.paperLanguage}}
+        </div>
+    </div>
+
+    <div class="line" style="margin-top: 5%;"></div>
+
+    <div class="instructions_margin">
+        <div class="instructions_head">
+            <b>Important Instructions for Candidates</b>
+        </div>
+        <div class="instructions_text">
+            <br>
+            1.<br>2.<br>3.<br>4.<br>5.<br>6.<br>7.<br>8.
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<div style="text-align: center;">
+    <button class="btn btn-success small">Print</button>
+</div>
+
+
+
+
+<br>
+
+

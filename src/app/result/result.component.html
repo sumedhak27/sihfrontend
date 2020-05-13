@@ -1,0 +1,219 @@
+<div class="box">
+    <div style="margin-top: 2%; margin-bottom: 2%; margin-left: 2%; margin-right: 2%;" class="row">
+        <div class="col-4">
+        <img src="../../assets/STET.jpg" height="60"> 
+        </div>
+        <div class="col-8" style="text-align: center; margin:auto;">
+            <h6>Sikkim Teacher Elegibility Test</h6>
+            <h6>Marks Statement</h6>
+            <!-- <br> -->
+        </div>
+    </div>
+    
+    <div class="line"></div>
+
+    
+    <div class="row avatar_margin">
+        <div class="col-6 avatar_text">
+            <b>
+            Application ID:  
+            <br>
+            Name:  
+            <br>
+            Mother's Name:  
+            <br>
+            Father's Name:  
+            <!-- <br>
+            Category: -->
+            </b>  
+        </div>
+        <div class="col-6 avatar_text">
+            {{formData._id}}  
+            <br>
+            {{formData.name.firstName}} {{formData.name.lastName}} 
+            <br>
+            {{formData.motherName.firstName}} {{formData.motherName.lastName}}  
+            <br>
+            {{formData.fatherName.firstName}} {{formData.fatherName.lastName}} 
+            <!-- <br>
+            Open -->
+        </div>
+    </div>
+
+    <!-- <div class="details">
+        <div class="personal_details">
+            <b>Personal Details</b>
+            <br>
+            Date of Birth:  {{formData.DOB}}
+            <br>
+            Mother's Name:  {{formData.motherName.firstname}} {{formData.motherName.lastname}}
+            
+        </div>
+        <div class="personal_details">
+            <b>Examination Details</b>
+            <br>
+            Date of Exam:  DD/MM/YYYY
+            <br>
+            Timing of Test:  12:00 pm to 2:00 pm
+            <br>
+            Test Center Number:  1234
+            <br>
+            Venue:  khewiqhdiwajf, hdiohwqfio, lndlkfnl, 9868.
+            <br>
+            Language of Answer:  {{formData.paperLanguage}}
+        </div>
+    </div> -->
+
+    <div class="line" style="margin-top: 3%;"></div>
+
+    <div class="instructions_margin">
+        <div class="instructions_head">
+            <b>Paper 1 (For Classes I to V) Primary Stage</b>
+        </div>
+        <br>
+        <div class="instructions_text">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Subject Name</th>
+                    <th scope="col">Marks Obtained</th>
+                    <!-- <th scope="col">Last</th>
+                    <th scope="col">Handle</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Child Development and Pedagogy</th>
+                    <td>{{result.paper1.childDevandPedagogy}}</td>
+                    <!-- <td>Otto</td>
+                    <td>@mdo</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Mathematics</th>
+                    <td>{{result.paper1.maths}}</td>
+                    <!-- <td>Thornton</td>
+                    <td>@fat</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Environmental Studies</th>
+                    <td>{{result.paper1.envStudies}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Language 1</th>
+                    <td>{{result.paper1.lang1}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Language 2</th>
+                    <td>{{result.paper1.lang2}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                    <td>{{result.paper1.total}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Percentage</th>
+                    <td>{{result.paper1.percentage}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <div class="line" style="margin-top: 3%;"></div>
+
+    <div class="instructions_margin">
+        <div class="instructions_head">
+            <b>Paper 2 (For Classes VI to VIII) Elimentary Stage</b>
+        </div>
+        <br>
+        <div class="instructions_text">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Subject Name</th>
+                    <th scope="col">Marks Obtained</th>
+                    <!-- <th scope="col">Last</th>
+                    <th scope="col">Handle</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Child Development and Pedagogy</th>
+                    <td>{{result.paper2.childDevandPedagogy}}</td>
+                    <!-- <td>Otto</td>
+                    <td>@mdo</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Social Science</th>
+                    <td>{{result.paper2.socialStudies}}</td>
+                    <!-- <td>Thornton</td>
+                    <td>@fat</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Language 1</th>
+                    <td>{{result.paper2.lang1}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Language 2</th>
+                    <td>{{result.paper2.lang2}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                    <td>{{result.paper2.total}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">Percentage</th>
+                    <td>{{result.paper2.percentage}}</td>
+                    <!-- <td>the Bird</td>
+                    <td>@twitter</td> -->
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="instructions_head instructions_margin">
+        <b>Candidates securing more than 60% are STET qualified.</b>
+    </div>
+</div>
+
+<br>
+
+<div style="text-align: center;">
+    <button class="btn btn-success small">Print</button>
+</div>
+
+<br>
+
+
+
+
+<!-- <div style="margin: 2%;">
+    <div style="margin-top: 6%; text-align: center;">
+        <b>Application Id:</b>  1234
+        <br>
+        <b>Name:</b>  1234
+        <br>
+        <b>Mother's Name:</b>  1234
+        <br>
+        <b>Father's Name:</b>  1234
+        <br>
+        <b>Category:</b>  1234
+        <br>
+    </div>
+</div> -->

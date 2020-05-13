@@ -1,20 +1,15 @@
 <div></div><br>
-<div style="text-align: center;"><h2>STET Login</h2></div>
+<div style="text-align: center;"><h5>STET Login</h5></div>
     <br>
     <div class="line"></div>
 <div class="margin">
     <div>
-        
-        <div class="card" style="text-align: center;">
+          <div class="form-group card" style="text-align: center;">
             <div class="card-body">
-                <form [formGroup]="uidpassgroup">
-                    <!-- <h5>Application Id  </h5>
-                        <h4>{{123}}</h4>
-                        <div class="line"></div><br> -->
-                    <input type="text" class="form-control" placeholder="User_id" aria-describedby="addon-wrapping" formControlName="_id">
-                   <br> <input type="password" class="form-control" placeholder="Password" aria-describedby="addon-wrapping" formControlName="key"><br>
-                </form>
-                    <div style="text-align: center;"><button class="btn getColour" (click)="profile()">Proceed</button></div>
+                <input type="text" class="form-control" placeholder="Application Id" name="_id" [(ngModel)]="_id"><br>
+                <input type="text" class="form-control" placeholder="Password" name="password" [(ngModel)]="password"><br>
+                <div style="text-align: center;"><button class="btn getColour" (click)="profile()">Proceed</button></div>
+                
             </div>
           </div>
     </div>

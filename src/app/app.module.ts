@@ -19,13 +19,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-// import { AngularFireUploadTask } from '@angular/fire/storage'
-import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FirebaseAuthComponent } from './firebase-auth/user-profile.component';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { FormsModule } from '@angular/forms';
-import { WindowService } from './window.service'
-
+import { WindowService } from './window.service';
+import { AdmitCardComponent } from './admitCard/admitCard.component';
+import { resultComponent } from './result/result.component';
 
 const config = {
   apiKey: "AIzaSyDm15po4iTKjo5QOeSsiUoq63Sfg7aCOOU",
@@ -45,7 +44,9 @@ const config = {
     HomeComponent,
     LoginComponent,
     ProfileComponent,
-    FirebaseAuthComponent
+    FirebaseAuthComponent,
+    AdmitCardComponent,
+    resultComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,12 +61,10 @@ const config = {
     MatButtonModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     AngularFireModule.initializeApp(config),
-    AngularFireStorageModule,
-    // AngularFireUploadTask,
     AngularFirestoreModule,
     AngularFireAuthModule,
     RecaptchaModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [WindowService],
   bootstrap: [AppComponent]
