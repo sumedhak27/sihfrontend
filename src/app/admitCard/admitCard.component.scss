@@ -1,0 +1,131 @@
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #3f51b5;
+}
+
+.box {
+  width: 595px;
+  height: 842px;
+  border: 5px solid black;
+//   padding: 50px;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.avatar_margin {
+    margin-top: 4%;
+    margin-bottom: 3%; 
+    margin-left: 2%; 
+    margin-right: 2%;
+}
+
+.avatar_text {
+    font-size: 20px; 
+    margin:auto;
+}
+
+.avatar_image {
+    background-image: url(../../assets/avatar_120.png);
+    padding: 0px;
+    margin: 0px;
+    width: 120px !important;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// .avatar_size {
+//     height: 120;
+
+// }
+
+.details {
+    margin-left: 4%; 
+    margin-right: 4%;
+}
+
+.personal_details {
+    font-size: 16px; 
+    margin-top: 4%;
+}
+
+// .exam_details {
+//     margin-top: 4%;
+// }
+
+.instructions_margin {
+    margin-left: 4%; 
+    margin-right: 4%; 
+    margin-top: 4%;
+}
+
+.instructions_head {
+    font-size: 18px; 
+    text-align: center;
+}
+
+.instructions_text {
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 630px) {
+    div.box {
+        width: 497px;
+        height: 825.6px;
+        border: 5px solid black;
+        // padding: 50px;
+          margin: auto;
+          margin-top: 2%;
+      }
+}
+
+@media screen and (max-width: 545px) {
+    div.box {
+        width: 345px;
+        height: 751px;
+        border: 5px solid black;
+        // padding: 50px;
+          margin: auto;
+          margin-top: 2%;
+      }
+    div.avatar_text {
+        font-size: 16px; 
+        margin:auto;
+    }
+    div.personal_details {
+        font-size: 14px; 
+        margin-top: 4%;
+    }
+    div.instructions_head {
+        font-size: 14px; 
+        text-align: center;
+    }
+    div.instructions_text {
+        font-size: 14px;
+    }
+    div.avatar_image {
+        background-image: url(../../assets/av_80.png);
+        padding: 0px;
+        margin: 0px;
+        width: 80px;
+        height: 80px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    // img.avatar_size {
+    //     height: 80;
+    // }
+}
+
+// .box_percent {
+//     width: 38.74%;
+//   height: 102.6%;
+//   border: 5px solid black;
+// //   padding: 50px;
+//     margin: auto;
+//     margin-top: 2%;
+// }
+
+//185

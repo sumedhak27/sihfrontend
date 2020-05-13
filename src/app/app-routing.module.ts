@@ -4,8 +4,9 @@ import { registrationFormComponent } from '../app/registration_form/registration
 import { HomeComponent } from '../app/home/home.component';
 import { LoginComponent } from '../app/Login/Login.component';
 import { ProfileComponent } from '../app/profile/profile.component';
-import { FirebaseAuthComponent } from '../app/firebase-auth/user-profile.component'
-
+import { FirebaseAuthComponent } from '../app/firebase-auth/user-profile.component';
+import { AdmitCardComponent } from '../app/admitCard/admitCard.component';
+import { resultComponent } from '../app/result/result.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent },
@@ -13,6 +14,8 @@ const routes: Routes = [
   { path:'login', component: LoginComponent },
   { path:'profile', component: ProfileComponent },
   { path:'firebase-auth', component:  FirebaseAuthComponent},
+  { path:'admitCard', component:  AdmitCardComponent},
+  { path:'result', component:  resultComponent},
 
   // { path:'registrationFormComponent_2', component: registrationFormComponent_2 }
 ];

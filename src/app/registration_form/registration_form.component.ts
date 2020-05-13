@@ -119,7 +119,7 @@ export class registrationFormComponent implements OnInit {
                     };
     console.warn(this.formData)
     
-    let promise1 = this.http.post("https://glacial-sands-20481.herokuapp.com/form/storeForm", this.formData )
+    let promise1 = this.http.post("http://localhost:3000/form/storeForm", this.formData )
     promise1.subscribe((res) => {
     let response = res
       console.log(res)
@@ -140,7 +140,7 @@ export class registrationFormComponent implements OnInit {
         _id : this.userId,
         key : this.password
       }
-      let p = this.http.post("https://glacial-sands-20481.herokuapp.com/form/newUser", body)
+      let p = this.http.post("http://localhost:3000/form/setPassword", body)
       p.subscribe(res => {
         console.log(res)
         alert("Password Set.")
@@ -157,11 +157,11 @@ export class registrationFormComponent implements OnInit {
   
 
   ngOnInit() {
-    let promise = this.http.get("https://glacial-sands-20481.herokuapp.com/form/getNewID")
-    promise.subscribe((res) => {
-      this.userId = <string>(Object.values(res)[0]);
-      console.log(typeof(Object.values(res)[0]), "  " , Object.values(res)[0])
-    })
+    // let promise = this.http.get("https://glacial-sands-20481.herokuapp.com/form/getNewID")
+    // promise.subscribe((res) => {
+    //   this.userId = <string>(Object.values(res)[0]);
+    //   console.log(typeof(Object.values(res)[0]), "  " , Object.values(res)[0])
+    // })
     
   }
 

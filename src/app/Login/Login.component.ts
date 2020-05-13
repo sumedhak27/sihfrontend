@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { Router } from '@angular/router'
+import { LoginService } from './login.service';
 
 // import {Component} from '@angular/core';
 @Component({
@@ -10,16 +11,27 @@ import { Router } from '@angular/router'
   styleUrls: ['./Login.component.scss']
 })
 
-export class LoginComponent {
-    constructor( private fb : FormBuilder, private _router: Router
+export class LoginComponent implements OnInit{
+    constructor( private _router: Router, 
+      private service: LoginService,
         // private http : HttpClient,
     ) { }
-    password = this.fb.group ( {
-        _id : ['',Validators.required],
-        pass1 : ['',Validators.required]
-      } )
+    
+    password = '';
+    _id = '';
+    //message: string;
+
       profile() {
-        this._router.navigateByUrl("/profile")
+        //this.message = this._id
+        this.service.newId(this._id)
+        this._router.navigateByUrl("/admitCard")
+        // this.service.login();
+      }
+
+      ngOnInit() {
+        //this.service.id.subscribe(result => this._id = result)
       }
     
+
 }
+
