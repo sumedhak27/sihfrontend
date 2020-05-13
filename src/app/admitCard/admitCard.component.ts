@@ -26,7 +26,7 @@ export class AdmitCardComponent implements OnInit {
       _id : this.loginid
     }
     console.log("Helloo")
-    let promise = this.http.post("http://localhost:3000/form/fetchForm", body)
+    let promise = this.http.post("https://cryptic-dusk-69277.herokuapp.com/form/fetchForm", body)
     promise.subscribe((res) => {
       this.formData = res;
       // console.log(this.formData)

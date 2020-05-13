@@ -70,22 +70,44 @@ export class registrationFormComponent implements OnInit {
     // paperLanguage: ['', Validators.required],
     // teacherCategory: ['', Validators.required],
 
-    selfFirstName: ['', Validators.required],
-    selfLastName: ['', Validators.required],
-    fatherFirstName: ['', Validators.required],
-    fatherLastName: ['', Validators.required],
-    motherFirstName: ['', Validators.required],
-    motherLastName: ['', Validators.required],
+    selfFirstName: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
+    selfLastName: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
+    fatherFirstName: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
+    fatherLastName: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
+    motherFirstName: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
+    motherLastName: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
     DOB: ['', Validators.required],
     streetAddress: ['', Validators.required],
-    city: ['', Validators.required],
-    district: ['', Validators.required],
-    state: ['', Validators.required],
-    postalCode: ['', Validators.required],
-    Email: ['', Validators.required],
-    mobNo: ['', Validators.required],
+    city: ['', Validators.required,],
+    district: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
+    state: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[A-Za-z]+$')])],
+    postalCode: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[1-9][0-9]{5}$')])],
+    Email: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
+    mobNo: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')])],
     paperLanguage: ['', Validators.required],
-
+    // , Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
   });
 
   onSubmit () {
@@ -119,7 +141,7 @@ export class registrationFormComponent implements OnInit {
                     };
     console.warn(this.formData)
     
-    let promise1 = this.http.post("http://localhost:3000/form/storeForm", this.formData )
+    let promise1 = this.http.post("https://cryptic-dusk-69277.herokuapp.com/form/storeForm", this.formData )
     promise1.subscribe((res) => {
     let response = res
       console.log(res)
@@ -140,7 +162,7 @@ export class registrationFormComponent implements OnInit {
         _id : this.userId,
         key : this.password
       }
-      let p = this.http.post("http://localhost:3000/form/setPassword", body)
+      let p = this.http.post("https://cryptic-dusk-69277.herokuapp.com/form/setPassword", body)
       p.subscribe(res => {
         console.log(res)
         alert("Password Set.")

@@ -35,6 +35,25 @@
                         <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="selfFirstName">
                         <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="selfLastName">
                     </div>
+
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['selfFirstName'].invalid && (registrationForm.controls['selfFirstName'].dirty || registrationForm.controls['selfFirstName'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['selfFirstName'].errors.required">
+                            First Name is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['selfFirstName'].errors.pattern">
+                               First Name is invalid.
+                            </div>
+                        </div>
+                        <div *ngIf="registrationForm.controls['selfLastName'].invalid && (registrationForm.controls['selfLastName'].dirty || registrationForm.controls['selfLastName'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['selfLastName'].errors.required">
+                            Last Name is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['selfFirstName'].errors.pattern">
+                               Last Name is invalid.
+                            </div>
+                        </div>
+                    </div>
         
         
                     <br>
@@ -45,6 +64,25 @@
                         <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="fatherFirstName">
                         <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="fatherLastName">
                     </div>
+
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['fatherFirstName'].invalid && (registrationForm.controls['fatherFirstName'].dirty || registrationForm.controls['fatherFirstName'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['fatherFirstName'].errors.required">
+                            Father's First Name is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['fatherFirstName'].errors.pattern">
+                                Father's First Name is invalid.
+                            </div>
+                        </div>
+                        <div *ngIf="registrationForm.controls['fatherLastName'].invalid && (registrationForm.controls['fatherLastName'].dirty || registrationForm.controls['fatherLastName'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['fatherLastName'].errors.required">
+                            Father's Last Name is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['fatherLastName'].errors.pattern">
+                                Father's Last Name is invalid.
+                            </div>
+                        </div>
+                    </div>
         
                     <br>
         
@@ -54,6 +92,25 @@
                         <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="motherFirstName">
                         <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="motherLastName">
                     </div>
+
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['motherFirstName'].invalid && (registrationForm.controls['motherFirstName'].dirty || registrationForm.controls['motherFirstName'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['motherFirstName'].errors.required">
+                            Mother's First Name is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['motherFirstName'].errors.pattern">
+                                Mother's First Name is invalid.
+                            </div>
+                        </div>
+                        <div *ngIf="registrationForm.controls['motherLastName'].invalid && (registrationForm.controls['motherLastName'].dirty || registrationForm.controls['motherLastName'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['motherLastName'].errors.required">
+                            Mother's Last Name is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['motherLastName'].errors.pattern">
+                                Mother's Last Name is invalid.
+                            </div>
+                        </div>
+                    </div>
         
                     <br>
                     <b>Date Of Birth:</b>
@@ -62,6 +119,15 @@
                         <div class="input-group flex-nowrap">
                             <input type="date" formControlName="DOB" class="form-control" placeholder="DD/MM/YYYY" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="DOB">
                             <!-- <input type="text" class="form-control" placeholder="Username" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="motherLastName"> -->
+                        </div>
+
+                        <div class="input-group flex-nowrap">
+                            <div *ngIf="registrationForm.controls['DOB'].invalid && (registrationForm.controls['DOB'].dirty || registrationForm.controls['DOB'].touched)" style="color: red;">
+                                <div *ngIf="registrationForm.controls['DOB'].errors.required">
+                                Date of Birth is required.
+                                </div>
+                            </div>
+                            
                         </div>
                     
                         
@@ -75,28 +141,103 @@
                         <input type="text" class="form-control" placeholder="Street" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="streetAddress">
                         <!-- <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="fatherLastName"> -->
                     </div>
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['streetAddress'].invalid && (registrationForm.controls['streetAddress'].dirty || registrationForm.controls['streetAddress'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['streetAddress'].errors.required">
+                            Street is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['streetAddress'].errors.pattern">
+                                Street is invalid.
+                            </div>
+                        </div>
+                        
+                    </div>
+
                     <br>
+
                     <div class="input-group flex-nowrap">
                         <input type="text" class="form-control" placeholder="City" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="city">
                         <input type="text" class="form-control" placeholder="District" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="district">
                     </div>
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['city'].invalid && (registrationForm.controls['city'].dirty || registrationForm.controls['city'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['city'].errors.required">
+                            City is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['city'].errors.pattern">
+                                City is invalid.
+                            </div>
+                        </div>
+                        <div *ngIf="registrationForm.controls['district'].invalid && (registrationForm.controls['district'].dirty || registrationForm.controls['district'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['district'].errors.required">
+                            District is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['district'].errors.pattern">
+                                District is invalid.
+                            </div>
+                        </div>
+                    </div>
+
                     <br>
+
                     <div class="input-group flex-nowrap">
                         <input type="text" class="form-control" placeholder="State" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="state">
                         <input type="text" class="form-control" placeholder="Postal Code" aria-label="Last Name" aria-describedby="addon-wrapping" formControlName="postalCode">
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['state'].invalid && (registrationForm.controls['state'].dirty || registrationForm.controls['state'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['state'].errors.required">
+                            State is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['state'].errors.pattern">
+                                State is invalid.
+                            </div>
+                        </div>
+                        <div *ngIf="registrationForm.controls['postalCode'].invalid && (registrationForm.controls['postalCode'].dirty || registrationForm.controls['postalCode'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['postalCode'].errors.required">
+                                Postal Code is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['postalCode'].errors.pattern">
+                                Postal Code is invalid.
+                            </div>
+                        </div>
                     </div> 
         
                     <br>
                     <b>Email Id:</b>
                     <br><br>
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Email Id" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="Email">
+                        <input type="email" class="form-control" placeholder="Email Id" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="Email">
                     </div>
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['Email'].invalid && (registrationForm.controls['Email'].dirty || registrationForm.controls['Email'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['Email'].errors.required">
+                                Email Id is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['Email'].errors.pattern">
+                                Email Id is invalid.
+                            </div>
+                        </div>
+                        
+                    </div>
+
                     <br>
+
                     <b>Phone Number:</b>
                     <br><br>
                     <div class="input-group flex-nowrap">
                         <input type="text" class="form-control" placeholder="Mobile Number" aria-label="First Name" aria-describedby="addon-wrapping" formControlName="mobNo">
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <div *ngIf="registrationForm.controls['mobNo'].invalid && (registrationForm.controls['mobNo'].dirty || registrationForm.controls['mobNo'].touched)" style="color: red;">
+                            <div *ngIf="registrationForm.controls['mobNo'].errors.required">
+                                Mobile Number is required.
+                            </div>
+                            <div *ngIf="registrationForm.controls['mobNo'].errors.pattern">
+                                Mobile Number is invalid.
+                            </div>
+                        </div>
+                        
                     </div>
                     <br>
                 </form>
@@ -117,8 +258,16 @@
                             <option value="Hindi">Hindi</option>
                             <option value="English">English</option>
                         </select>
+                        <div>
+                            <div *ngIf="registrationForm.controls['paperLanguage'].invalid && (registrationForm.controls['paperLanguage'].dirty || registrationForm.controls['paperLanguage'].touched)" style="color: red;">
+                                <div *ngIf="registrationForm.controls['paperLanguage'].errors.required">
+                                    Paper Language is required.
+                                </div>
+                            </div>
+                            
+                        </div>
                         <br><br>
-                        <b>Category of Teacher for STET:</b>
+                        <!-- <b>Category of Teacher for STET:</b>
                         <br><br>
                         <div class="custom-control custom-radio" >
                             <input type="radio" class="custom-control-input" id="1" name="defaultExampleRadios">
@@ -132,8 +281,8 @@
                             <input type="radio" class="custom-control-input" id="3" name="defaultExampleRadios">
                             <label class="custom-control-label" for="3">GT Science/Maths for Classes VI to VIII</label>
                         </div>
-                        <br><br>
-                        <b>Educational Qualification</b>
+                        <br><br> -->
+                        <!-- <b>Educational Qualification</b>
                         <br><br>
                         <b>Xth Details</b>
                         <br><br>
@@ -315,7 +464,7 @@
                         <div class="custom-control custom-radio">
                             <input type="radio" class="custom-control-input" id="4" name="defaultExampleRadios">
                             <label class="custom-control-label" for="4">No</label>
-                        </div><br>
+                        </div><br> -->
                         
                         <b>Upload Photo</b><br><br>
                         <div class="input-group mb-3">
@@ -352,3 +501,4 @@
           
     </div>
 </div>
+

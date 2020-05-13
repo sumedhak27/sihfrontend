@@ -27,7 +27,7 @@ export class resultComponent implements OnInit {
       _id : this.loginid
     }
     console.log("Helloo")
-    let promise = this.http.post("http://localhost:3000/form/fetchForm", body)
+    let promise = this.http.post("https://cryptic-dusk-69277.herokuapp.com/form/fetchForm", body)
     promise.subscribe((res) => {
       this.formData = res;
       // console.log(this.formData)
@@ -37,7 +37,7 @@ export class resultComponent implements OnInit {
 
     //Result API
     console.log("hii")
-    let promise1 = this.http.get("http://localhost:3000/document/getResult", {params: body})
+    let promise1 = this.http.get("https://cryptic-dusk-69277.herokuapp.com/document/getResult", {params: body})
     promise1.subscribe((res) => {
       this.result = res;
       console.log(this.result)
